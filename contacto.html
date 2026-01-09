@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con PalmiSoft para cotizaciones y consultas sobre desarrollo de software y automatización">
+    <meta name="keywords" content="contacto, cotización, software, PalmiSoft, Palmira">
+    <title>Contacto - PalmiSoft</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-code"></i>
+                        <span>PalmiSoft</span>
+                    </a>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                        <li><a href="index.html#tecnologias" class="nav-link">Tecnologías</a></li>
+                        <li><a href="contacto.html" class="nav-link btn-contact active">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contáctanos</h1>
+            <p class="page-subtitle">Estamos listos para ayudarte con tu proyecto</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2 class="contact-info-title">Información de Contacto</h2>
+                    <p class="contact-info-description">¿Tienes un proyecto en mente? Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Ubicación</h3>
+                                <p>Carrera 28C # 4B - 20<br>Palmira, Valle del Cauca<br>Colombia</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Teléfono</h3>
+                                <p><a href="tel:+573173184631">+57 317 318 4631</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p><a href="mailto:rojan11@gmail.com">rojan11@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Horario de Atención</h3>
+                                <p>Lunes - Viernes: 8:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h3>Síguenos</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2 class="contact-form-title">Envíanos un Mensaje</h2>
+                    <p class="contact-form-description">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                    
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="nombre" class="form-label">
+                                Nombre completo <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="nombre" 
+                                name="nombre" 
+                                class="form-input" 
+                                placeholder="Ej: Juan Pérez"
+                                required
+                                minlength="3"
+                            >
+                            <span class="form-error" id="nombre-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Correo electrónico <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="Ej: tu@email.com"
+                                required
+                            >
+                            <span class="form-error" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono" class="form-label">
+                                Teléfono <span class="required">*</span>
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="telefono" 
+                                name="telefono" 
+                                class="form-input" 
+                                placeholder="Ej: +57 317 318 4631"
+                                required
+                                pattern="[0-9+\s\-()]+"
+                            >
+                            <span class="form-error" id="telefono-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="empresa" class="form-label">
+                                Empresa / Organización
+                            </label>
+                            <input 
+                                type="text" 
+                                id="empresa" 
+                                name="empresa" 
+                                class="form-input" 
+                                placeholder="Nombre de tu empresa (opcional)"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto" class="form-label">
+                                Asunto <span class="required">*</span>
+                            </label>
+                            <select id="asunto" name="asunto" class="form-input" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="cotizacion">Solicitud de cotización</option>
+                                <option value="desarrollo">Desarrollo de software</option>
+                                <option value="automatizacion">Automatización / RPA</option>
+                                <option value="soporte">Soporte técnico</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <span class="form-error" id="asunto-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje" class="form-label">
+                                Mensaje <span class="required">*</span>
+                            </label>
+                            <textarea 
+                                id="mensaje" 
+                                name="mensaje" 
+                                class="form-input" 
+                                rows="6" 
+                                placeholder="Cuéntanos sobre tu proyecto o necesidad..."
+                                required
+                                minlength="10"
+                            ></textarea>
+                            <span class="form-error" id="mensaje-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacidad" name="privacidad" required>
+                                <span>He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad y Tratamiento de Datos</a> <span class="required">*</span></span>
+                            </label>
+                            <span class="form-error" id="privacidad-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <i class="fas fa-paper-plane"></i> Enviar mensaje
+                        </button>
+                    </form>
+
+                    <!-- Success Message (hidden by default) -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>¡Mensaje enviado con éxito!</h3>
+                        <p>Gracias por contactarnos. Hemos recibido tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+                        <button id="sendAnother" class="btn btn-secondary">Enviar otro mensaje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Optional) -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Ubicación</h2>
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Carrera 28C # 4B - 20, Palmira, Valle del Cauca, Colombia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">
+                        <i class="fas fa-code"></i> PalmiSoft
+                    </h3>
+                    <p class="footer-description">Soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#servicios">Desarrollo de Software</a></li>
+                        <li><a href="index.html#servicios">Automatización y RPA</a></li>
+                        <li><a href="index.html#servicios">Bases de Datos</a></li>
+                        <li><a href="index.html#servicios">Desarrollo de Aplicaciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#acerca">Sobre Nosotros</a></li>
+                        <li><a href="index.html#tecnologias">Tecnologías</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Carrera 28C # 4B - 20<br>Palmira, Valle del Cauca<br>Colombia</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+573173184631">+57 317 318 4631</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:rojan11@gmail.com">rojan11@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 PalmiSoft - NIT: 1112956985-1. Todos los derechos reservados.</p>
+                <p class="footer-legal">
+                    <a href="privacidad.html">Política de Privacidad</a> | 
+                    <a href="privacidad.html">Tratamiento de Datos</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
