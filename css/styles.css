@@ -300,7 +300,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #050e1d 0%, #0d2248 40%, #1a3a8f 78%, #2563eb 100%);
     color: var(--white);
     overflow: hidden;
 }
@@ -308,9 +308,9 @@ a:hover {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23667eea" width="1200" height="600"/><g fill-opacity="0.1"><polygon fill="%23444" points="1200 0 0 0 0 600"/><polygon fill="%23222" points="1200 600 1200 0 0 600"/></g></svg>');
-    background-size: cover;
-    opacity: 0.3;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+    opacity: 1;
 }
 
 .hero-content {
@@ -466,6 +466,8 @@ a:hover {
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
     border: 1px solid var(--gray-lighter);
+    position: relative;
+    overflow: hidden;
 }
 
 .service-card:hover {
@@ -1280,3 +1282,257 @@ a:hover {
 
 .hidden { display: none; }
 .visible { display: block; }
+
+/* ============= LOGO IMAGES ============= */
+.logo-img {
+    height: 44px;
+    max-width: 200px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-logo-img {
+    height: 38px;
+    max-width: 180px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: opacity var(--transition-fast);
+}
+
+.footer-logo-img:hover {
+    opacity: 1;
+}
+
+/* ============= ABOUT LOGO WRAPPER ============= */
+.about-logo-wrapper {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 25px 60px rgba(37, 99, 235, 0.14), 0 0 0 1px rgba(37, 99, 235, 0.07);
+    padding: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-logo-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.about-logo-img {
+    max-width: 76%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    transition: transform var(--transition-base);
+}
+
+.about-logo-wrapper:hover .about-logo-img {
+    transform: scale(1.04);
+}
+
+/* ============= SERVICE CARD ACCENT LINE ============= */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-base);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* ============= WHATSAPP FLOATING BUTTON ============= */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 62px;
+    height: 62px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 2rem;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+    transition: all var(--transition-base);
+    z-index: 998;
+    text-decoration: none;
+}
+
+.whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(37, 211, 102, 0.55);
+    animation: whatsapp-pulse 2.5s ease-out infinite;
+    z-index: -1;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.12);
+    background: #128c7e;
+    color: var(--white);
+    box-shadow: 0 10px 32px rgba(37, 211, 102, 0.55);
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 74px;
+    background: var(--dark);
+    color: var(--white);
+    padding: 0.45rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: all var(--transition-fast);
+    pointer-events: none;
+    box-shadow: var(--shadow-lg);
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid var(--dark);
+}
+
+.whatsapp-btn:hover .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes whatsapp-pulse {
+    0%   { transform: scale(1);   opacity: 0.75; }
+    70%  { transform: scale(1.7); opacity: 0; }
+    100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* ============= FORM SUBMIT ERROR ============= */
+.form-submit-error {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: var(--error);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    animation: fadeInUp 0.3s ease;
+}
+
+/* ============= CAPTCHA ============= */
+.captcha-box {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.captcha-question {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    padding: 0.65rem 1.1rem;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    min-width: 190px;
+    user-select: none;
+    letter-spacing: 0.02em;
+    box-shadow: var(--shadow-md);
+}
+
+.captcha-question i {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+.captcha-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 140px;
+}
+
+.captcha-input {
+    flex: 1;
+    /* Remove number arrows */
+    -moz-appearance: textfield;
+}
+
+.captcha-input::-webkit-outer-spin-button,
+.captcha-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.captcha-refresh {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: var(--gray-lighter);
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.captcha-refresh:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: rotate(90deg);
+}
+
+@media (max-width: 480px) {
+    .captcha-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .captcha-question {
+        min-width: unset;
+    }
+}

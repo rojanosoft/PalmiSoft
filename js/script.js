@@ -3,6 +3,37 @@
  * Handles navigation, form validation, animations, and user interactions
  */
 
+// ============= EMAILJS INITIALIZATION =============
+// Pasos para configurar el envío de correos:
+// 1. Crea una cuenta gratuita en https://www.emailjs.com/
+// 2. Agrega un servicio de correo (Gmail) y autoriza con rojan11@gmail.com
+// 3. Crea una plantilla de email con las variables:
+//    {{from_name}}, {{from_email}}, {{phone}}, {{company}}, {{subject}}, {{message}}
+// 4. Reemplaza los tres valores de TODO a continuación con tus credenciales
+(function () {
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init('yHLOKk7EiGOdvK2ZZ'); // TODO: Reemplaza con tu Public Key de EmailJS
+    }
+})();
+
+// ============= SIMPLE MATH CAPTCHA =============
+let captchaAnswer = null;
+
+function generateCaptcha() {
+    const ops = ['+', '−'];
+    const op = ops[Math.floor(Math.random() * ops.length)];
+    let a = Math.floor(Math.random() * 12) + 2;   // 2-13
+    let b = Math.floor(Math.random() * 10) + 1;   // 1-10
+    if (op === '−' && b > a) { const tmp = a; a = b; b = tmp; }  // evitar negativos
+    captchaAnswer = op === '+' ? a + b : a - b;
+    const textEl = document.getElementById('captcha-text');
+    if (textEl) textEl.textContent = `¿Cuánto es ${a} ${op} ${b}?`;
+    const input = document.getElementById('captcha-input');
+    if (input) { input.value = ''; input.classList.remove('error'); }
+    const err = document.getElementById('captcha-error');
+    if (err) err.textContent = '';
+}
+
 // ============= MOBILE NAVIGATION ============= 
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -61,7 +92,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
+// ============= CAPTCHA INIT =============
+document.addEventListener('DOMContentLoaded', function () {
+    generateCaptcha();
+    const refreshBtn = document.getElementById('captcha-refresh');
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', function () {
+            generateCaptcha();
+            const input = document.getElementById('captcha-input');
+            if (input) input.focus();
+        });
+    }
+});
 // ============= HEADER SCROLL EFFECT ============= 
 let lastScroll = 0;
 const header = document.querySelector('.header');
@@ -158,7 +200,19 @@ if (contactForm) {
             showError('privacidad', 'Debes aceptar la política de privacidad para continuar');
             isValid = false;
         }
-        
+
+        // Validate CAPTCHA
+        const captchaInput = document.getElementById('captcha-input');
+        const captchaVal = captchaInput ? parseInt(captchaInput.value, 10) : NaN;
+        if (!captchaInput || captchaInput.value.trim() === '' || isNaN(captchaVal)) {
+            showError('captcha-input', 'Por favor responde la pregunta de verificación');
+            isValid = false;
+        } else if (captchaVal !== captchaAnswer) {
+            showError('captcha-input', 'Respuesta incorrecta. Intenta de nuevo');
+            generateCaptcha();
+            isValid = false;
+        }
+
         // If form is valid
         if (isValid) {
             // Simulate form submission
@@ -167,31 +221,40 @@ if (contactForm) {
             
             submitButton.disabled = true;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            
-            // Simulate API call delay
-            setTimeout(function() {
-                // Hide form and show success message
+
+            // Remover error previo, si existe
+            const prevError = contactForm.querySelector('.form-submit-error');
+            if (prevError) prevError.remove();
+
+            // Enviar correo vía EmailJS
+            // TODO: Reemplaza 'YOUR_SERVICE_ID' y 'YOUR_TEMPLATE_ID' con tus valores de EmailJS
+            emailjs.send('service_acmkgtf', 'template_05etxzv', {
+                from_name:  nombre.value.trim(),
+                from_email: email.value.trim(),
+                phone:      telefono.value.trim(),
+                company:    document.getElementById('empresa').value.trim() || 'No especificada',
+                subject:    asunto.value,
+                message:    mensaje.value.trim(),
+                to_email:   'rojan11@gmail.com'
+            }).then(function () {
+                // Éxito: ocultar formulario y mostrar mensaje de éxito
                 contactForm.style.display = 'none';
                 successMessage.style.display = 'block';
-                
-                // Scroll to success message
                 successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-                // Log form data (in production, this would be sent to a server)
-                console.log('Form Data:', {
-                    nombre: nombre.value,
-                    email: email.value,
-                    telefono: telefono.value,
-                    empresa: document.getElementById('empresa').value,
-                    asunto: asunto.value,
-                    mensaje: mensaje.value,
-                    timestamp: new Date().toISOString()
-                });
-                
-                // Re-enable button
                 submitButton.disabled = false;
                 submitButton.innerHTML = originalText;
-            }, 1500);
+            }).catch(function (error) {
+                // Error al enviar: mostrar mensaje de error
+                console.error('Error al enviar el mensaje:', error);
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalText;
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'form-submit-error';
+                errorDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Hubo un error al enviar el mensaje. Por favor inténtalo de nuevo o contáctanos directamente por <strong>WhatsApp</strong>.';
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                contactForm.insertBefore(errorDiv, submitBtn);
+                setTimeout(function () { if (errorDiv.parentNode) errorDiv.remove(); }, 7000);
+            });
         } else {
             // Scroll to first error
             const firstError = document.querySelector('.form-input.error');
@@ -223,6 +286,7 @@ if (contactForm) {
             contactForm.style.display = 'block';
             contactForm.reset();
             clearErrors();
+            generateCaptcha();
             contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     }
