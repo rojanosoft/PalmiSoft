@@ -76,11 +76,15 @@
                         <span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Inicio</a></li>
-                        <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
-                        <li><a href="index.html#tecnologias" class="nav-link">Tecnologías</a></li>
-                        <li><a href="contacto.html" class="nav-link btn-contact active">Contacto</a></li>
+                        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="index.html#servicios" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+                        <li><a href="index.html#tecnologias" class="nav-link" data-i18n="nav.technologies">Tecnologías</a></li>
+                        <li><a href="contacto.html" class="nav-link btn-contact active" data-i18n="nav.contact">Contacto</a></li>
                     </ul>
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
+                        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -89,8 +93,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="page-title">Contáctanos</h1>
-            <p class="page-subtitle">Estamos listos para ayudarte con tu proyecto</p>
+            <h1 class="page-title" data-i18n="contact.page.title">Contáctanos</h1>
+            <p class="page-subtitle" data-i18n="contact.page.subtitle">Estamos listos para ayudarte con tu proyecto</p>
         </div>
     </section>
 
@@ -100,8 +104,8 @@
             <div class="contact-wrapper">
                 <!-- Contact Information -->
                 <div class="contact-info">
-                    <h2 class="contact-info-title">Información de Contacto</h2>
-                    <p class="contact-info-description">¿Tienes un proyecto en mente? Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.</p>
+                    <h2 class="contact-info-title" data-i18n="contact.info.title">Información de Contacto</h2>
+                    <p class="contact-info-description" data-i18n="contact.info.desc">¿Tienes un proyecto en mente? Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
@@ -109,7 +113,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="contact-text">
-                                <h3>Ubicación</h3>
+                                <h3 data-i18n="contact.location">Ubicación</h3>
                                 <p>Palmira, Valle del Cauca<br>Colombia</p>
                             </div>
                         </div>
@@ -119,7 +123,7 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="contact-text">
-                                <h3>Teléfono</h3>
+                                <h3 data-i18n="contact.phone">Teléfono</h3>
                                 <p><a href="tel:+573173184631">+57 317 318 4631</a></p>
                             </div>
                         </div>
@@ -129,7 +133,7 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact-text">
-                                <h3>Email</h3>
+                                <h3 data-i18n="contact.email">Email</h3>
                                 <p><a href="mailto:rojan11@gmail.com">rojan11@gmail.com</a></p>
                             </div>
                         </div>
@@ -139,14 +143,14 @@
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div class="contact-text">
-                                <h3>Horario de Atención</h3>
-                                <p>Lunes - Viernes: 8:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 1:00 PM</p>
+                                <h3 data-i18n="contact.hours.title">Horario de Atención</h3>
+                                <p data-i18n-html="contact.hours.text">Lunes - Viernes: 8:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 1:00 PM</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="contact-social">
-                        <h3>Síguenos</h3>
+                        <h3 data-i18n="contact.follow">Síguenos</h3>
                         <div class="social-links">
                             <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                             <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -157,19 +161,20 @@
 
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper">
-                    <h2 class="contact-form-title">Envíanos un Mensaje</h2>
-                    <p class="contact-form-description">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                    <h2 class="contact-form-title" data-i18n="contact.form.title">Envíanos un Mensaje</h2>
+                    <p class="contact-form-description" data-i18n="contact.form.desc">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
                     
                     <form id="contactForm" class="contact-form" novalidate>
                         <div class="form-group">
                             <label for="nombre" class="form-label">
-                                Nombre completo <span class="required">*</span>
+                                <span data-i18n="form.nombre.label">Nombre completo</span> <span class="required">*</span>
                             </label>
                             <input 
                                 type="text" 
                                 id="nombre" 
                                 name="nombre" 
                                 class="form-input" 
+                                data-i18n-placeholder="form.nombre.placeholder"
                                 placeholder="Ej: Juan Pérez"
                                 required
                                 minlength="3"
@@ -179,13 +184,14 @@
 
                         <div class="form-group">
                             <label for="email" class="form-label">
-                                Correo electrónico <span class="required">*</span>
+                                <span data-i18n="form.email.label">Correo electrónico</span> <span class="required">*</span>
                             </label>
                             <input 
                                 type="email" 
                                 id="email" 
                                 name="email" 
                                 class="form-input" 
+                                data-i18n-placeholder="form.email.placeholder"
                                 placeholder="Ej: tu@email.com"
                                 required
                             >
@@ -194,13 +200,14 @@
 
                         <div class="form-group">
                             <label for="telefono" class="form-label">
-                                Teléfono <span class="required">*</span>
+                                <span data-i18n="form.telefono.label">Teléfono</span> <span class="required">*</span>
                             </label>
                             <input 
                                 type="tel" 
                                 id="telefono" 
                                 name="telefono" 
                                 class="form-input" 
+                                data-i18n-placeholder="form.telefono.placeholder"
                                 placeholder="Ej: +57 317 318 4631"
                                 required
                                 pattern="[0-9+\s\-()]+"
@@ -210,42 +217,44 @@
 
                         <div class="form-group">
                             <label for="empresa" class="form-label">
-                                Empresa / Organización
+                                <span data-i18n="form.empresa.label">Empresa / Organización</span>
                             </label>
                             <input 
                                 type="text" 
                                 id="empresa" 
                                 name="empresa" 
                                 class="form-input" 
+                                data-i18n-placeholder="form.empresa.placeholder"
                                 placeholder="Nombre de tu empresa (opcional)"
                             >
                         </div>
 
                         <div class="form-group">
                             <label for="asunto" class="form-label">
-                                Asunto <span class="required">*</span>
+                                <span data-i18n="form.asunto.label">Asunto</span> <span class="required">*</span>
                             </label>
                             <select id="asunto" name="asunto" class="form-input" required>
-                                <option value="">Selecciona un asunto</option>
-                                <option value="cotizacion">Solicitud de cotización</option>
-                                <option value="desarrollo">Desarrollo de software</option>
-                                <option value="automatizacion">Automatización / RPA</option>
-                                <option value="soporte">Soporte técnico</option>
-                                <option value="consulta">Consulta general</option>
-                                <option value="otro">Otro</option>
+                                <option value="" data-i18n="form.asunto.default">Selecciona un asunto</option>
+                                <option value="cotizacion" data-i18n="form.asunto.opt1">Solicitud de cotización</option>
+                                <option value="desarrollo" data-i18n="form.asunto.opt2">Desarrollo de software</option>
+                                <option value="automatizacion" data-i18n="form.asunto.opt3">Automatización / RPA</option>
+                                <option value="soporte" data-i18n="form.asunto.opt4">Soporte técnico</option>
+                                <option value="consulta" data-i18n="form.asunto.opt5">Consulta general</option>
+                                <option value="otro" data-i18n="form.asunto.opt6">Otro</option>
                             </select>
                             <span class="form-error" id="asunto-error"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="mensaje" class="form-label">
-                                Mensaje <span class="required">*</span>
+                                <span data-i18n="form.mensaje.label">Mensaje</span> <span class="required">*</span>
                             </label>
                             <textarea 
                                 id="mensaje" 
                                 name="mensaje" 
                                 class="form-input" 
                                 rows="6" 
+                                data-i18n-placeholder="form.mensaje.placeholder"
                                 placeholder="Cuéntanos sobre tu proyecto o necesidad..."
                                 required
                                 minlength="10"
@@ -256,7 +265,7 @@
                         <div class="form-group">
                             <label class="checkbox-label">
                                 <input type="checkbox" id="privacidad" name="privacidad" required>
-                                <span>He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad y Tratamiento de Datos</a> <span class="required">*</span></span>
+                                <span data-i18n-html="form.privacy.text">He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad y Tratamiento de Datos</a> <span class="required">*</span></span>
                             </label>
                             <span class="form-error" id="privacidad-error"></span>
                         </div>
@@ -264,7 +273,7 @@
                         <!-- CAPTCHA simple antispam -->
                         <div class="form-group captcha-group">
                             <label for="captcha-input" class="form-label">
-                                Verificación de seguridad <span class="required">*</span>
+                                <span data-i18n="form.captcha.label">Verificación de seguridad</span> <span class="required">*</span>
                             </label>
                             <div class="captcha-box">
                                 <div class="captcha-question">
@@ -276,10 +285,14 @@
                                         type="number"
                                         id="captcha-input"
                                         class="form-input captcha-input"
+                                        data-i18n-placeholder="form.captcha.placeholder"
                                         placeholder="Tu respuesta"
                                         autocomplete="off"
                                     >
-                                    <button type="button" class="captcha-refresh" id="captcha-refresh" title="Nueva pregunta" aria-label="Generar nueva pregunta">
+                                    <button type="button" class="captcha-refresh" id="captcha-refresh"
+                                        data-i18n-title="form.captcha.refreshTitle"
+                                        data-i18n-aria="form.captcha.refreshAria"
+                                        title="Nueva pregunta" aria-label="Generar nueva pregunta">
                                         <i class="fas fa-sync-alt"></i>
                                     </button>
                                 </div>
@@ -288,7 +301,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-lg btn-block">
-                            <i class="fas fa-paper-plane"></i> Enviar mensaje
+                            <i class="fas fa-paper-plane"></i> <span data-i18n="form.submit">Enviar mensaje</span>
                         </button>
                     </form>
 
@@ -297,9 +310,9 @@
                         <div class="success-icon">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <h3>¡Mensaje enviado con éxito!</h3>
-                        <p>Gracias por contactarnos. Hemos recibido tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
-                        <button id="sendAnother" class="btn btn-secondary">Enviar otro mensaje</button>
+                        <h3 data-i18n="success.title">¡Mensaje enviado con éxito!</h3>
+                        <p data-i18n="success.text">Gracias por contactarnos. Hemos recibido tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+                        <button id="sendAnother" class="btn btn-secondary" data-i18n="success.another">Enviar otro mensaje</button>
                     </div>
                 </div>
             </div>
@@ -309,7 +322,7 @@
     <!-- Map Section (Optional) -->
     <section class="map-section">
         <div class="container">
-            <h2 class="section-title">Nuestra Ubicación</h2>
+            <h2 class="section-title" data-i18n="map.title">Nuestra Ubicación</h2>
             <div class="map-placeholder">
                 <i class="fas fa-map-marked-alt"></i>
                 <p>Palmira, Valle del Cauca, Colombia</p>
@@ -325,7 +338,7 @@
                     <h3 class="footer-title">
                         <img src="img/Logo3.png" alt="PalmiSoft" class="footer-logo-img">
                     </h3>
-                    <p class="footer-description">Soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio.</p>
+                    <p class="footer-description" data-i18n="footer.desc">Soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio.</p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -334,27 +347,27 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Servicios</h4>
+                    <h4 class="footer-subtitle" data-i18n="footer.services">Servicios</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html#servicios">Desarrollo de Software</a></li>
-                        <li><a href="index.html#servicios">Automatización y RPA</a></li>
-                        <li><a href="index.html#servicios">Bases de Datos</a></li>
-                        <li><a href="index.html#servicios">Desarrollo de Aplicaciones</a></li>
+                        <li><a href="index.html#servicios" data-i18n="footer.links.s1">Desarrollo de Software</a></li>
+                        <li><a href="index.html#servicios" data-i18n="footer.links.s2">Automatización y RPA</a></li>
+                        <li><a href="index.html#servicios" data-i18n="footer.links.s3">Bases de Datos</a></li>
+                        <li><a href="index.html#servicios" data-i18n="footer.links.s4">Desarrollo de Aplicaciones</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Empresa</h4>
+                    <h4 class="footer-subtitle" data-i18n="footer.company">Empresa</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html#acerca">Sobre Nosotros</a></li>
-                        <li><a href="index.html#tecnologias">Tecnologías</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="index.html#acerca" data-i18n="footer.links.about">Sobre Nosotros</a></li>
+                        <li><a href="index.html#tecnologias" data-i18n="footer.links.tech">Tecnologías</a></li>
+                        <li><a href="contacto.html" data-i18n="footer.links.contact">Contacto</a></li>
+                        <li><a href="privacidad.html" data-i18n="footer.links.privacy">Política de Privacidad</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Contacto</h4>
+                    <h4 class="footer-subtitle" data-i18n="footer.contact">Contacto</h4>
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
@@ -373,10 +386,10 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 PalmiSoft - NIT: 1112956985-1. Todos los derechos reservados.</p>
+                <p data-i18n="footer.rights">&copy; 2026 PalmiSoft - NIT: 1112956985-1. Todos los derechos reservados.</p>
                 <p class="footer-legal">
-                    <a href="privacidad.html">Política de Privacidad</a> | 
-                    <a href="privacidad.html">Tratamiento de Datos</a>
+                    <a href="privacidad.html" data-i18n="footer.legal.privacy">Política de Privacidad</a> | 
+                    <a href="privacidad.html" data-i18n="footer.legal.data">Tratamiento de Datos</a>
                 </p>
             </div>
         </div>
@@ -387,13 +400,15 @@
        class="whatsapp-btn"
        target="_blank"
        rel="noopener noreferrer"
+       data-i18n-aria="whatsapp.aria"
        aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">¡Chatea con nosotros!</span>
+        <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¡Chatea con nosotros!</span>
     </a>
 
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

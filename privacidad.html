@@ -76,11 +76,15 @@
                         <span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Inicio</a></li>
-                        <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
-                        <li><a href="index.html#tecnologias" class="nav-link">Tecnologías</a></li>
-                        <li><a href="contacto.html" class="nav-link btn-contact">Contacto</a></li>
+                        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="index.html#servicios" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+                        <li><a href="index.html#tecnologias" class="nav-link" data-i18n="nav.technologies">Tecnologías</a></li>
+                        <li><a href="contacto.html" class="nav-link btn-contact" data-i18n="nav.contact">Contacto</a></li>
                     </ul>
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
+                        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -89,8 +93,8 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="page-title">Política de Privacidad y Tratamiento de Datos Personales</h1>
-            <p class="page-subtitle">Última actualización: Enero 2026</p>
+            <h1 class="page-title" data-i18n="privacy.title">Política de Privacidad y Tratamiento de Datos Personales</h1>
+            <p class="page-subtitle" data-i18n="privacy.subtitle">Última actualización: Enero 2026</p>
         </div>
     </section>
 
@@ -98,13 +102,15 @@
     <section class="privacy-section">
         <div class="container">
             <div class="privacy-content">
+                <!-- EN-only disclaimer -->
+                <div id="privacy-disclaimer" class="highlight-text" style="display:none; margin-bottom: 1.5rem;"></div>
                 <!-- Identification Section -->
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">1.</span>
-                        IDENTIFICACIÓN DEL RESPONSABLE DEL TRATAMIENTO
+                        <span data-i18n="privacy.s1.title">IDENTIFICACIÓN DEL RESPONSABLE DEL TRATAMIENTO</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s1.body">
                         <ul class="info-list">
                             <li><strong>Razón social:</strong> PalmiSoft</li>
                             <li><strong>NIT:</strong> 1112956985-1</li>
@@ -121,9 +127,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">2.</span>
-                        MARCO LEGAL
+                        <span data-i18n="privacy.s2.title">MARCO LEGAL</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s2.body">
                         <p>La presente Política de Privacidad y Tratamiento de Datos Personales se rige por:</p>
                         <ul>
                             <li>Artículo 15 de la Constitución Política de Colombia</li>
@@ -139,9 +145,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">3.</span>
-                        DEFINICIONES
+                        <span data-i18n="privacy.s3.title">DEFINICIONES</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s3.body">
                         <dl class="definition-list">
                             <dt>Dato Personal:</dt>
                             <dd>Cualquier información vinculada o que pueda asociarse a una persona natural determinada o determinable.</dd>
@@ -162,9 +168,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">4.</span>
-                        DATOS PERSONALES OBJETO DE TRATAMIENTO
+                        <span data-i18n="privacy.s4.title">DATOS PERSONALES OBJETO DE TRATAMIENTO</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s4.body">
                         <p>PALMISOFT recolecta y trata únicamente datos personales no sensibles, tales como:</p>
                         <ul>
                             <li>Nombres y apellidos</li>
@@ -185,9 +191,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">5.</span>
-                        FINALIDAD DEL TRATAMIENTO DE LOS DATOS
+                        <span data-i18n="privacy.s5.title">FINALIDAD DEL TRATAMIENTO DE LOS DATOS</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s5.body">
                         <p>Los datos personales recolectados serán tratados para las siguientes finalidades:</p>
                         <ul>
                             <li>Atender solicitudes, consultas, peticiones o cotizaciones realizadas por los usuarios</li>
@@ -204,9 +210,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">6.</span>
-                        AUTORIZACIÓN DEL TITULAR
+                        <span data-i18n="privacy.s6.title">AUTORIZACIÓN DEL TITULAR</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s6.body">
                         <p>La recolección y tratamiento de los datos personales se realiza previa autorización libre, expresa e informada del titular, la cual se obtiene mediante formularios físicos, electrónicos, mensajes digitales o a través del uso del sitio web de PalmiSoft.</p>
                         <p>El titular manifiesta que la información suministrada es veraz y actualizada.</p>
                     </div>
@@ -216,9 +222,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">7.</span>
-                        DERECHOS DEL TITULAR DE LOS DATOS
+                        <span data-i18n="privacy.s7.title">DERECHOS DEL TITULAR DE LOS DATOS</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s7.body">
                         <p>De conformidad con la ley, el titular tiene derecho a:</p>
                         <ul class="rights-list">
                             <li><i class="fas fa-check"></i> Conocer, actualizar y rectificar sus datos personales</li>
@@ -235,9 +241,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">8.</span>
-                        PROCEDIMIENTO PARA EJERCER LOS DERECHOS
+                        <span data-i18n="privacy.s8.title">PROCEDIMIENTO PARA EJERCER LOS DERECHOS</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s8.body">
                         <p>El titular podrá ejercer sus derechos enviando una solicitud al siguiente correo electrónico:</p>
                         <div class="contact-box">
                             <i class="fas fa-envelope"></i>
@@ -262,9 +268,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">9.</span>
-                        MEDIDAS DE SEGURIDAD DE LA INFORMACIÓN
+                        <span data-i18n="privacy.s9.title">MEDIDAS DE SEGURIDAD DE LA INFORMACIÓN</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s9.body">
                         <p>PalmiSoft adopta medidas técnicas, administrativas y humanas razonables para proteger los datos personales contra pérdida, acceso no autorizado, uso indebido, alteración o divulgación.</p>
                     </div>
                 </div>
@@ -273,9 +279,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">10.</span>
-                        TRANSFERENCIA Y TRANSMISIÓN DE DATOS PERSONALES
+                        <span data-i18n="privacy.s10.title">TRANSFERENCIA Y TRANSMISIÓN DE DATOS PERSONALES</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s10.body">
                         <p>Los datos personales no serán vendidos, cedidos ni compartidos con terceros, salvo cuando:</p>
                         <ul>
                             <li>Sea requerido por autoridad competente</li>
@@ -289,9 +295,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">11.</span>
-                        VIGENCIA DEL TRATAMIENTO
+                        <span data-i18n="privacy.s11.title">VIGENCIA DEL TRATAMIENTO</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s11.body">
                         <p>La presente política entra en vigencia a partir de su publicación en el sitio web.</p>
                         <p>Los datos personales serán tratados durante el tiempo necesario para cumplir con las finalidades descritas o mientras exista una relación legal o contractual.</p>
                     </div>
@@ -301,9 +307,9 @@
                 <div class="privacy-block">
                     <h2 class="privacy-title">
                         <span class="privacy-number">12.</span>
-                        MODIFICACIONES A LA POLÍTICA
+                        <span data-i18n="privacy.s12.title">MODIFICACIONES A LA POLÍTICA</span>
                     </h2>
-                    <div class="privacy-text">
+                    <div class="privacy-text" data-i18n-html="privacy.s12.body">
                         <p>PalmiSoft se reserva el derecho de modificar la presente Política de Privacidad y Tratamiento de Datos Personales en cualquier momento.</p>
                         <p>Cualquier cambio será publicado oportunamente en el sitio web.</p>
                     </div>
@@ -311,14 +317,14 @@
 
                 <!-- Contact Section -->
                 <div class="privacy-contact">
-                    <h3><i class="fas fa-question-circle"></i> ¿Tienes dudas sobre esta política?</h3>
-                    <p>Si tienes preguntas sobre nuestra Política de Privacidad o deseas ejercer tus derechos, contáctanos:</p>
+                    <h3><i class="fas fa-question-circle"></i> <span data-i18n="privacy.contactSection.title">¿Tienes dudas sobre esta política?</span></h3>
+                    <p data-i18n="privacy.contactSection.desc">Si tienes preguntas sobre nuestra Política de Privacidad o deseas ejercer tus derechos, contáctanos:</p>
                     <div class="contact-buttons">
                         <a href="mailto:rojan11@gmail.com" class="btn btn-primary">
-                            <i class="fas fa-envelope"></i> Enviar correo
+                            <i class="fas fa-envelope"></i> <span data-i18n="privacy.contactSection.emailBtn">Enviar correo</span>
                         </a>
                         <a href="contacto.html" class="btn btn-secondary">
-                            <i class="fas fa-comment"></i> Formulario de contacto
+                            <i class="fas fa-comment"></i> <span data-i18n="privacy.contactSection.formBtn">Formulario de contacto</span>
                         </a>
                     </div>
                 </div>
@@ -327,7 +333,7 @@
             <!-- Back to Home -->
             <div class="back-to-home">
                 <a href="index.html" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left"></i> Volver al inicio
+                    <i class="fas fa-arrow-left"></i> <span data-i18n="privacy.back">Volver al inicio</span>
                 </a>
             </div>
         </div>
@@ -341,7 +347,7 @@
                     <h3 class="footer-title">
                         <img src="img/Logo3.png" alt="PalmiSoft" class="footer-logo-img">
                     </h3>
-                    <p class="footer-description">Soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio.</p>
+                    <p class="footer-description" data-i18n="footer.desc">Soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio.</p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -350,27 +356,27 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Servicios</h4>
+                    <h4 class="footer-subtitle" data-i18n="footer.services">Servicios</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html#servicios">Desarrollo de Software</a></li>
-                        <li><a href="index.html#servicios">Automatización y RPA</a></li>
-                        <li><a href="index.html#servicios">Bases de Datos</a></li>
-                        <li><a href="index.html#servicios">Desarrollo de Aplicaciones</a></li>
+                        <li><a href="index.html#servicios" data-i18n="footer.links.s1">Desarrollo de Software</a></li>
+                        <li><a href="index.html#servicios" data-i18n="footer.links.s2">Automatización y RPA</a></li>
+                        <li><a href="index.html#servicios" data-i18n="footer.links.s3">Bases de Datos</a></li>
+                        <li><a href="index.html#servicios" data-i18n="footer.links.s4">Desarrollo de Aplicaciones</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Empresa</h4>
+                    <h4 class="footer-subtitle" data-i18n="footer.company">Empresa</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html#acerca">Sobre Nosotros</a></li>
-                        <li><a href="index.html#tecnologias">Tecnologías</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="index.html#acerca" data-i18n="footer.links.about">Sobre Nosotros</a></li>
+                        <li><a href="index.html#tecnologias" data-i18n="footer.links.tech">Tecnologías</a></li>
+                        <li><a href="contacto.html" data-i18n="footer.links.contact">Contacto</a></li>
+                        <li><a href="privacidad.html" data-i18n="footer.links.privacy">Política de Privacidad</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Contacto</h4>
+                    <h4 class="footer-subtitle" data-i18n="footer.contact">Contacto</h4>
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
@@ -389,10 +395,10 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 PalmiSoft - NIT: 1112956985-1. Todos los derechos reservados.</p>
+                <p data-i18n="footer.rights">&copy; 2026 PalmiSoft - NIT: 1112956985-1. Todos los derechos reservados.</p>
                 <p class="footer-legal">
-                    <a href="privacidad.html">Política de Privacidad</a> | 
-                    <a href="privacidad.html">Tratamiento de Datos</a>
+                    <a href="privacidad.html" data-i18n="footer.legal.privacy">Política de Privacidad</a> | 
+                    <a href="privacidad.html" data-i18n="footer.legal.data">Tratamiento de Datos</a>
                 </p>
             </div>
         </div>
@@ -403,11 +409,13 @@
        class="whatsapp-btn"
        target="_blank"
        rel="noopener noreferrer"
+       data-i18n-aria="whatsapp.aria"
        aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">¡Chatea con nosotros!</span>
+        <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¡Chatea con nosotros!</span>
     </a>
 
+    <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

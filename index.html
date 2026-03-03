@@ -106,11 +106,7 @@
           "name": "PalmiSoft",
           "description": "Software a la medida que impulsa tu negocio",
           "publisher": { "@id": "https://palmisoft.com.co/#business" },
-          "inLanguage": "es-CO",
-          "potentialAction": {
-            "@type": "ContactAction",
-            "target": "https://palmisoft.com.co/contacto.html"
-          }
+          "inLanguage": "es-CO"
         },
         {
           "@type": "WebPage",
@@ -159,11 +155,15 @@
                         <span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                        <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                        <li><a href="#tecnologias" class="nav-link">Tecnologías</a></li>
-                        <li><a href="contacto.html" class="nav-link btn-contact">Contacto</a></li>
+                        <li><a href="#inicio" class="nav-link active" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="#servicios" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+                        <li><a href="#tecnologias" class="nav-link" data-i18n="nav.technologies">Tecnologías</a></li>
+                        <li><a href="contacto.html" class="nav-link btn-contact" data-i18n="nav.contact">Contacto</a></li>
                     </ul>
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
+                        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -174,27 +174,27 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Software a la medida que impulsa tu negocio</h1>
-                <p class="hero-subtitle">Transformamos ideas en soluciones tecnológicas innovadoras. Automatización, desarrollo web y aplicaciones empresariales en Palmira, Colombia.</p>
+                <h1 class="hero-title" data-i18n="hero.title">Software a la medida que impulsa tu negocio</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Transformamos ideas en soluciones tecnológicas innovadoras. Automatización, desarrollo web y aplicaciones empresariales en Palmira, Colombia.</p>
                 <div class="hero-cta">
-                    <a href="contacto.html" class="btn btn-primary">Solicitar cotización</a>
-                    <a href="#servicios" class="btn btn-secondary">Conocer servicios</a>
+                    <a href="contacto.html" class="btn btn-primary" data-i18n="hero.cta.quote">Solicitar cotización</a>
+                    <a href="#servicios" class="btn btn-secondary" data-i18n="hero.cta.services">Conocer servicios</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <i class="fas fa-project-diagram"></i>
                         <span class="stat-number">50+</span>
-                        <span class="stat-label">Proyectos completados</span>
+                        <span class="stat-label" data-i18n="hero.stat.projects">Proyectos completados</span>
                     </div>
                     <div class="stat-item">
                         <i class="fas fa-users"></i>
                         <span class="stat-number">30+</span>
-                        <span class="stat-label">Clientes satisfechos</span>
+                        <span class="stat-label" data-i18n="hero.stat.clients">Clientes satisfechos</span>
                     </div>
                     <div class="stat-item">
                         <i class="fas fa-code-branch"></i>
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">Código de calidad</span>
+                        <span class="stat-label" data-i18n="hero.stat.quality">Código de calidad</span>
                     </div>
                 </div>
             </div>
@@ -211,25 +211,25 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title">Sobre PalmiSoft</h2>
-                    <p class="section-description">Somos una empresa de desarrollo de software ubicada en Palmira, Colombia, especializada en crear soluciones tecnológicas personalizadas que se adaptan a las necesidades específicas de cada negocio.</p>
-                    <p>Con experiencia en múltiples lenguajes de programación y tecnologías modernas, ayudamos a empresas a automatizar procesos, desarrollar aplicaciones robustas y optimizar sus operaciones mediante la tecnología.</p>
+                    <h2 class="section-title" data-i18n="about.title">Sobre PalmiSoft</h2>
+                    <p class="section-description" data-i18n="about.p1">Somos una empresa de desarrollo de software ubicada en Palmira, Colombia, especializada en crear soluciones tecnológicas personalizadas que se adaptan a las necesidades específicas de cada negocio.</p>
+                    <p data-i18n="about.p2">Con experiencia en múltiples lenguajes de programación y tecnologías modernas, ayudamos a empresas a automatizar procesos, desarrollar aplicaciones robustas y optimizar sus operaciones mediante la tecnología.</p>
                     <div class="about-features">
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Soluciones personalizadas</span>
+                            <span data-i18n="about.f1">Soluciones personalizadas</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Tecnologías modernas</span>
+                            <span data-i18n="about.f2">Tecnologías modernas</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Soporte continuo</span>
+                            <span data-i18n="about.f3">Soporte continuo</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Entrega oportuna</span>
+                            <span data-i18n="about.f4">Entrega oportuna</span>
                         </div>
                     </div>
                 </div>
@@ -246,21 +246,21 @@
     <section id="servicios" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nuestros Servicios</h2>
-                <p class="section-description">Ofrecemos soluciones tecnológicas integrales para impulsar el crecimiento de tu empresa</p>
+                <h2 class="section-title" data-i18n="services.title">Nuestros Servicios</h2>
+                <p class="section-description" data-i18n="services.desc">Ofrecemos soluciones tecnológicas integrales para impulsar el crecimiento de tu empresa</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3 class="service-title">Desarrollo de Software a la Medida</h3>
-                    <p class="service-description">Creamos aplicaciones personalizadas que se adaptan perfectamente a los procesos y necesidades específicas de tu negocio.</p>
+                    <h3 class="service-title" data-i18n="services.s1.title">Desarrollo de Software a la Medida</h3>
+                    <p class="service-description" data-i18n="services.s1.desc">Creamos aplicaciones personalizadas que se adaptan perfectamente a los procesos y necesidades específicas de tu negocio.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-angle-right"></i> Análisis de requerimientos</li>
-                        <li><i class="fas fa-angle-right"></i> Arquitectura escalable</li>
-                        <li><i class="fas fa-angle-right"></i> Desarrollo ágil</li>
-                        <li><i class="fas fa-angle-right"></i> Mantenimiento continuo</li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s1.f1">Análisis de requerimientos</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s1.f2">Arquitectura escalable</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s1.f3">Desarrollo ágil</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s1.f4">Mantenimiento continuo</span></li>
                     </ul>
                 </div>
 
@@ -268,13 +268,13 @@
                     <div class="service-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3 class="service-title">Automatización y RPA</h3>
-                    <p class="service-description">Automatizamos procesos repetitivos para aumentar la eficiencia, reducir errores y liberar tiempo valioso de tu equipo.</p>
+                    <h3 class="service-title" data-i18n="services.s2.title">Automatización y RPA</h3>
+                    <p class="service-description" data-i18n="services.s2.desc">Automatizamos procesos repetitivos para aumentar la eficiencia, reducir errores y liberar tiempo valioso de tu equipo.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-angle-right"></i> Análisis de procesos</li>
-                        <li><i class="fas fa-angle-right"></i> Bots inteligentes</li>
-                        <li><i class="fas fa-angle-right"></i> Integración de sistemas</li>
-                        <li><i class="fas fa-angle-right"></i> Monitoreo y optimización</li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s2.f1">Análisis de procesos</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s2.f2">Bots inteligentes</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s2.f3">Integración de sistemas</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s2.f4">Monitoreo y optimización</span></li>
                     </ul>
                 </div>
 
@@ -282,13 +282,13 @@
                     <div class="service-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3 class="service-title">Gestión de Bases de Datos</h3>
-                    <p class="service-description">Diseño, implementación y optimización de bases de datos robustas para garantizar la integridad y disponibilidad de tu información.</p>
+                    <h3 class="service-title" data-i18n="services.s3.title">Gestión de Bases de Datos</h3>
+                    <p class="service-description" data-i18n="services.s3.desc">Diseño, implementación y optimización de bases de datos robustas para garantizar la integridad y disponibilidad de tu información.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-angle-right"></i> Oracle Database</li>
-                        <li><i class="fas fa-angle-right"></i> PostgreSQL</li>
-                        <li><i class="fas fa-angle-right"></i> MySQL</li>
-                        <li><i class="fas fa-angle-right"></i> Optimización de queries</li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s3.f1">Oracle Database</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s3.f2">PostgreSQL</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s3.f3">MySQL</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s3.f4">Optimización de queries</span></li>
                     </ul>
                 </div>
 
@@ -296,13 +296,13 @@
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 class="service-title">Desarrollo de Aplicaciones</h3>
-                    <p class="service-description">Aplicaciones web y móviles modernas, intuitivas y escalables con las mejores prácticas de desarrollo.</p>
+                    <h3 class="service-title" data-i18n="services.s4.title">Desarrollo de Aplicaciones</h3>
+                    <p class="service-description" data-i18n="services.s4.desc">Aplicaciones web y móviles modernas, intuitivas y escalables con las mejores prácticas de desarrollo.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-angle-right"></i> Aplicaciones web</li>
-                        <li><i class="fas fa-angle-right"></i> Interfaces modernas</li>
-                        <li><i class="fas fa-angle-right"></i> Diseño responsive</li>
-                        <li><i class="fas fa-angle-right"></i> Experiencia de usuario</li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s4.f1">Aplicaciones web</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s4.f2">Interfaces modernas</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s4.f3">Diseño responsive</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-i18n="services.s4.f4">Experiencia de usuario</span></li>
                     </ul>
                 </div>
             </div>
@@ -313,13 +313,13 @@
     <section id="tecnologias" class="technologies">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Tecnologías que Dominamos</h2>
-                <p class="section-description">Trabajamos con las tecnologías más modernas y confiables del mercado</p>
+                <h2 class="section-title" data-i18n="tech.title">Tecnologías que Dominamos</h2>
+                <p class="section-description" data-i18n="tech.desc">Trabajamos con las tecnologías más modernas y confiables del mercado</p>
             </div>
             <div class="tech-categories">
                 <div class="tech-category">
                     <h3 class="tech-category-title">
-                        <i class="fas fa-code"></i> Lenguajes de Programación
+                        <i class="fas fa-code"></i> <span data-i18n="tech.cat1">Lenguajes de Programación</span>
                     </h3>
                     <div class="tech-grid">
                         <div class="tech-item">
@@ -343,7 +343,7 @@
 
                 <div class="tech-category">
                     <h3 class="tech-category-title">
-                        <i class="fas fa-layer-group"></i> Frameworks y Librerías
+                        <i class="fas fa-layer-group"></i> <span data-i18n="tech.cat2">Frameworks y Librerías</span>
                     </h3>
                     <div class="tech-grid">
                         <div class="tech-item">
@@ -367,7 +367,7 @@
 
                 <div class="tech-category">
                     <h3 class="tech-category-title">
-                        <i class="fas fa-server"></i> Bases de Datos
+                        <i class="fas fa-server"></i> <span data-i18n="tech.cat3">Bases de Datos</span>
                     </h3>
                     <div class="tech-grid">
                         <div class="tech-item">
@@ -391,7 +391,7 @@
 
                 <div class="tech-category">
                     <h3 class="tech-category-title">
-                        <i class="fas fa-tools"></i> Herramientas y DevOps
+                        <i class="fas fa-tools"></i> <span data-i18n="tech.cat4">Herramientas y DevOps</span>
                     </h3>
                     <div class="tech-grid">
                         <div class="tech-item">
@@ -420,14 +420,14 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">¿Listo para transformar tu negocio?</h2>
-                <p class="cta-description">Conversemos sobre tu proyecto y descubre cómo podemos ayudarte a alcanzar tus objetivos</p>
+                <h2 class="cta-title" data-i18n="cta.title">¿Listo para transformar tu negocio?</h2>
+                <p class="cta-description" data-i18n="cta.desc">Conversemos sobre tu proyecto y descubre cómo podemos ayudarte a alcanzar tus objetivos</p>
                 <div class="cta-buttons">
                     <a href="contacto.html" class="btn btn-primary btn-lg">
-                        <i class="fas fa-paper-plane"></i> Solicitar cotización
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="cta.quote">Solicitar cotización</span>
                     </a>
                     <a href="tel:+573173184631" class="btn btn-secondary btn-lg">
-                        <i class="fas fa-phone"></i> Llamar ahora
+                        <i class="fas fa-phone"></i> <span data-i18n="cta.call">Llamar ahora</span>
                     </a>
                 </div>
             </div>
@@ -442,7 +442,7 @@
                     <h3 class="footer-title">
                         <img src="img/Logo3.png" alt="PalmiSoft" class="footer-logo-img">
                     </h3>
-                    <p class="footer-description">Soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio.</p>
+                    <p class="footer-description" data-i18n="footer.desc">Soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio.</p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -451,27 +451,27 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Servicios</h4>
+                    <h4 class="footer-subtitle" data-i18n="footer.services">Servicios</h4>
                     <ul class="footer-links">
-                        <li><a href="#servicios">Desarrollo de Software</a></li>
-                        <li><a href="#servicios">Automatización y RPA</a></li>
-                        <li><a href="#servicios">Bases de Datos</a></li>
-                        <li><a href="#servicios">Desarrollo de Aplicaciones</a></li>
+                        <li><a href="#servicios" data-i18n="footer.links.s1">Desarrollo de Software</a></li>
+                        <li><a href="#servicios" data-i18n="footer.links.s2">Automatización y RPA</a></li>
+                        <li><a href="#servicios" data-i18n="footer.links.s3">Bases de Datos</a></li>
+                        <li><a href="#servicios" data-i18n="footer.links.s4">Desarrollo de Aplicaciones</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Empresa</h4>
+                    <h4 class="footer-subtitle" data-i18n="footer.company">Empresa</h4>
                     <ul class="footer-links">
-                        <li><a href="#acerca">Sobre Nosotros</a></li>
-                        <li><a href="#tecnologias">Tecnologías</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="#acerca" data-i18n="footer.links.about">Sobre Nosotros</a></li>
+                        <li><a href="#tecnologias" data-i18n="footer.links.tech">Tecnologías</a></li>
+                        <li><a href="contacto.html" data-i18n="footer.links.contact">Contacto</a></li>
+                        <li><a href="privacidad.html" data-i18n="footer.links.privacy">Política de Privacidad</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Contacto</h4>
+                    <h4 class="footer-subtitle" data-i18n="footer.contact">Contacto</h4>
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
@@ -490,10 +490,10 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 PalmiSoft - NIT: 1112956985-1. Todos los derechos reservados.</p>
+                <p data-i18n="footer.rights">&copy; 2026 PalmiSoft - NIT: 1112956985-1. Todos los derechos reservados.</p>
                 <p class="footer-legal">
-                    <a href="privacidad.html">Política de Privacidad</a> | 
-                    <a href="privacidad.html">Tratamiento de Datos</a>
+                    <a href="privacidad.html" data-i18n="footer.legal.privacy">Política de Privacidad</a> | 
+                    <a href="privacidad.html" data-i18n="footer.legal.data">Tratamiento de Datos</a>
                 </p>
             </div>
         </div>
@@ -504,11 +504,13 @@
        class="whatsapp-btn"
        target="_blank"
        rel="noopener noreferrer"
+       data-i18n-aria="whatsapp.aria"
        aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">¡Chatea con nosotros!</span>
+        <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¡Chatea con nosotros!</span>
     </a>
 
+    <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -16,6 +16,12 @@
     }
 })();
 
+// ============= I18N HELPER =============
+// Wraps PalmiI18n.t() with a fallback to the raw key.
+function _t(key) {
+    return (window.PalmiI18n || { t: function(k) { return k; } }).t(key);
+}
+
 // ============= SIMPLE MATH CAPTCHA =============
 let captchaAnswer = null;
 
@@ -26,8 +32,9 @@ function generateCaptcha() {
     let b = Math.floor(Math.random() * 10) + 1;   // 1-10
     if (op === '−' && b > a) { const tmp = a; a = b; b = tmp; }  // evitar negativos
     captchaAnswer = op === '+' ? a + b : a - b;
+    const question = _t('form.captcha.question');
     const textEl = document.getElementById('captcha-text');
-    if (textEl) textEl.textContent = `¿Cuánto es ${a} ${op} ${b}?`;
+    if (textEl) textEl.textContent = `${question} ${a} ${op} ${b}?`;
     const input = document.getElementById('captcha-input');
     if (input) { input.value = ''; input.classList.remove('error'); }
     const err = document.getElementById('captcha-error');
@@ -160,7 +167,7 @@ if (contactForm) {
         // Validate nombre
         const nombre = document.getElementById('nombre');
         if (!nombre.value.trim() || nombre.value.trim().length < 3) {
-            showError('nombre', 'Por favor ingresa tu nombre completo (mínimo 3 caracteres)');
+            showError('nombre', _t('errors.nombre.submit'));
             isValid = false;
         }
         
@@ -168,7 +175,7 @@ if (contactForm) {
         const email = document.getElementById('email');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email.value.trim() || !emailRegex.test(email.value)) {
-            showError('email', 'Por favor ingresa un correo electrónico válido');
+            showError('email', _t('errors.email.submit'));
             isValid = false;
         }
         
@@ -176,28 +183,28 @@ if (contactForm) {
         const telefono = document.getElementById('telefono');
         const telefonoRegex = /^[0-9+\s\-()]+$/;
         if (!telefono.value.trim() || !telefonoRegex.test(telefono.value)) {
-            showError('telefono', 'Por favor ingresa un número de teléfono válido');
+            showError('telefono', _t('errors.telefono.submit'));
             isValid = false;
         }
         
         // Validate asunto
         const asunto = document.getElementById('asunto');
         if (!asunto.value) {
-            showError('asunto', 'Por favor selecciona un asunto');
+            showError('asunto', _t('errors.asunto.submit'));
             isValid = false;
         }
         
         // Validate mensaje
         const mensaje = document.getElementById('mensaje');
         if (!mensaje.value.trim() || mensaje.value.trim().length < 10) {
-            showError('mensaje', 'Por favor ingresa un mensaje (mínimo 10 caracteres)');
+            showError('mensaje', _t('errors.mensaje.submit'));
             isValid = false;
         }
         
         // Validate privacidad
         const privacidad = document.getElementById('privacidad');
         if (!privacidad.checked) {
-            showError('privacidad', 'Debes aceptar la política de privacidad para continuar');
+            showError('privacidad', _t('errors.privacidad.submit'));
             isValid = false;
         }
 
@@ -205,10 +212,10 @@ if (contactForm) {
         const captchaInput = document.getElementById('captcha-input');
         const captchaVal = captchaInput ? parseInt(captchaInput.value, 10) : NaN;
         if (!captchaInput || captchaInput.value.trim() === '' || isNaN(captchaVal)) {
-            showError('captcha-input', 'Por favor responde la pregunta de verificación');
+            showError('captcha-input', _t('errors.captcha.empty'));
             isValid = false;
         } else if (captchaVal !== captchaAnswer) {
-            showError('captcha-input', 'Respuesta incorrecta. Intenta de nuevo');
+            showError('captcha-input', _t('errors.captcha.wrong'));
             generateCaptcha();
             isValid = false;
         }
@@ -220,7 +227,7 @@ if (contactForm) {
             const originalText = submitButton.innerHTML;
             
             submitButton.disabled = true;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + _t('form.sending');
 
             // Remover error previo, si existe
             const prevError = contactForm.querySelector('.form-submit-error');
@@ -250,7 +257,7 @@ if (contactForm) {
                 submitButton.innerHTML = originalText;
                 const errorDiv = document.createElement('div');
                 errorDiv.className = 'form-submit-error';
-                errorDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Hubo un error al enviar el mensaje. Por favor inténtalo de nuevo o contáctanos directamente por <strong>WhatsApp</strong>.';
+                errorDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + _t('errors.sendFail');
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 contactForm.insertBefore(errorDiv, submitBtn);
                 setTimeout(function () { if (errorDiv.parentNode) errorDiv.remove(); }, 7000);
@@ -331,7 +338,7 @@ function validateField(field) {
         case 'nombre':
             if (!field.value.trim() || field.value.trim().length < 3) {
                 isValid = false;
-                errorMessage = 'Mínimo 3 caracteres';
+                errorMessage = _t('errors.nombre.validate');
             }
             break;
             
@@ -339,7 +346,7 @@ function validateField(field) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!field.value.trim() || !emailRegex.test(field.value)) {
                 isValid = false;
-                errorMessage = 'Correo electrónico inválido';
+                errorMessage = _t('errors.email.validate');
             }
             break;
             
@@ -347,28 +354,28 @@ function validateField(field) {
             const telefonoRegex = /^[0-9+\s\-()]+$/;
             if (!field.value.trim() || !telefonoRegex.test(field.value)) {
                 isValid = false;
-                errorMessage = 'Número de teléfono inválido';
+                errorMessage = _t('errors.telefono.validate');
             }
             break;
             
         case 'asunto':
             if (!field.value) {
                 isValid = false;
-                errorMessage = 'Selecciona un asunto';
+                errorMessage = _t('errors.asunto.validate');
             }
             break;
             
         case 'mensaje':
             if (!field.value.trim() || field.value.trim().length < 10) {
                 isValid = false;
-                errorMessage = 'Mínimo 10 caracteres';
+                errorMessage = _t('errors.mensaje.validate');
             }
             break;
             
         case 'privacidad':
             if (!field.checked) {
                 isValid = false;
-                errorMessage = 'Debes aceptar la política';
+                errorMessage = _t('errors.privacidad.validate');
             }
             break;
     }

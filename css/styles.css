@@ -1536,3 +1536,56 @@ a:hover {
         min-width: unset;
     }
 }
+
+/* ============= LANGUAGE SWITCHER ============= */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1.5px solid rgba(15, 23, 42, 0.25);
+    color: var(--dark);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 4px 9px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Mobile: show switcher inline in the nav-wrapper */
+@media (max-width: 768px) {
+    .lang-switcher {
+        margin-left: var(--spacing-xs);
+        margin-right: 0;
+        order: 3; /* after logo and toggle */
+    }
+
+    .mobile-menu-toggle {
+        margin-left: auto; /* push toggle + lang-switcher to the right */
+        order: 2;
+    }
+
+    .nav-wrapper {
+        justify-content: flex-start;
+    }
+}
