@@ -100,7 +100,7 @@ const translations = {
                 contact: 'Contacto',
                 privacy: 'Política de Privacidad'
             },
-            rights: '© 2026 PalmiSoft - NIT: 1112956985-1. Todos los derechos reservados.',
+            rights: '© 2026 PalmiSoft - Todos los derechos reservados.',
             legal: {
                 privacy: 'Política de Privacidad',
                 data: 'Tratamiento de Datos'
@@ -210,7 +210,6 @@ const translations = {
                 title: 'IDENTIFICACIÓN DEL RESPONSABLE DEL TRATAMIENTO',
                 body: `<ul class="info-list">
                             <li><strong>Razón social:</strong> PalmiSoft</li>
-                            <li><strong>NIT:</strong> 1112956985-1</li>
                             <li><strong>Domicilio:</strong> Palmira, Valle del Cauca – Colombia</li>
                             <li><strong>Dirección:</strong> Palmira, Valle del Cauca</li>
                             <li><strong>Correo electrónico:</strong> <a href="mailto:rojan11@gmail.com">rojan11@gmail.com</a></li>
@@ -434,7 +433,7 @@ const translations = {
                 contact: 'Contact',
                 privacy: 'Privacy Policy'
             },
-            rights: '© 2026 PalmiSoft - NIT: 1112956985-1. All rights reserved.',
+            rights: '© 2026 PalmiSoft - All rights reserved.',
             legal: {
                 privacy: 'Privacy Policy',
                 data: 'Data Processing'
@@ -544,7 +543,6 @@ const translations = {
                 title: 'IDENTIFICATION OF THE DATA CONTROLLER',
                 body: `<ul class="info-list">
                             <li><strong>Company name:</strong> PalmiSoft</li>
-                            <li><strong>Tax ID:</strong> 1112956985-1</li>
                             <li><strong>Registered address:</strong> Palmira, Valle del Cauca – Colombia</li>
                             <li><strong>Address:</strong> Palmira, Valle del Cauca</li>
                             <li><strong>Email:</strong> <a href="mailto:rojan11@gmail.com">rojan11@gmail.com</a></li>

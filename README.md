@@ -257,9 +257,7 @@ Este proyecto fue desarrollado específicamente para **PalmiSoft**.
 
 **PalmiSoft**
 - 📍 Carrera 28C # 4B - 20, Palmira, Valle del Cauca, Colombia
-- 📞 +57 317 318 4631
 - 📧 rojan11@gmail.com
-- 🆔 NIT: 1112956985-1
 
 ---
 
