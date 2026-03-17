@@ -64,7 +64,6 @@ The active nav item on `contacto.html` and `privacidad.html` gets `class="nav-li
 Present on all three pages. Fixed bottom-right, `position: fixed; z-index: 998`. CSS class `.whatsapp-btn` with:
 - Pulse ring animation via `::before` pseudo-element (`@keyframes whatsapp-pulse`)
 - Tooltip on hover via `.whatsapp-tooltip` child `<span>`
-- Link: `https://wa.me/573173184631?text=...` (pre-filled greeting message)
 
 ## Scroll Animations
 

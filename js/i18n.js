@@ -214,7 +214,6 @@ const translations = {
                             <li><strong>Domicilio:</strong> Palmira, Valle del Cauca – Colombia</li>
                             <li><strong>Dirección:</strong> Palmira, Valle del Cauca</li>
                             <li><strong>Correo electrónico:</strong> <a href="mailto:rojan11@gmail.com">rojan11@gmail.com</a></li>
-                            <li><strong>Teléfono:</strong> <a href="tel:+573173184631">+57 317 318 4631</a></li>
                         </ul>
                         <p>En adelante, <strong>PALMISOFT</strong>, actuando como Responsable del Tratamiento de Datos Personales.</p>`
             },
@@ -549,7 +548,6 @@ const translations = {
                             <li><strong>Registered address:</strong> Palmira, Valle del Cauca – Colombia</li>
                             <li><strong>Address:</strong> Palmira, Valle del Cauca</li>
                             <li><strong>Email:</strong> <a href="mailto:rojan11@gmail.com">rojan11@gmail.com</a></li>
-                            <li><strong>Phone:</strong> <a href="tel:+573173184631">+57 317 318 4631</a></li>
                         </ul>
                         <p>Hereinafter referred to as <strong>PALMISOFT</strong>, acting as the Data Controller.</p>`
             },
