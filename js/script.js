@@ -6,7 +6,7 @@
 // ============= EMAILJS INITIALIZATION =============
 // Pasos para configurar el envío de correos:
 // 1. Crea una cuenta gratuita en https://www.emailjs.com/
-// 2. Agrega un servicio de correo (Gmail) y autoriza con rojan11@gmail.com
+// 2. Agrega un servicio de correo (Gmail) y autoriza con contacto.palmisoft@gmail.com
 // 3. Crea una plantilla de email con las variables:
 //    {{from_name}}, {{from_email}}, {{phone}}, {{company}}, {{subject}}, {{message}}
 // 4. Reemplaza los tres valores de TODO a continuación con tus credenciales
@@ -242,7 +242,7 @@ if (contactForm) {
                 company:    document.getElementById('empresa').value.trim() || 'No especificada',
                 subject:    asunto.value,
                 message:    mensaje.value.trim(),
-                to_email:   'rojan11@gmail.com'
+                to_email:   'contacto.palmisoft@gmail.com'
             }).then(function () {
                 // Éxito: ocultar formulario y mostrar mensaje de éxito
                 contactForm.style.display = 'none';
@@ -480,4 +480,4 @@ window.addEventListener('load', function() {
 // ============= CONSOLE BRANDING ============= 
 console.log('%c🚀 PalmiSoft - Soluciones Tecnológicas', 'color: #2563eb; font-size: 20px; font-weight: bold;');
 console.log('%c¿Interesado en trabajar con nosotros?', 'color: #64748b; font-size: 14px;');
-console.log('%cContacto: rojan11@gmail.com | +57 317 318 4631', 'color: #0ea5e9; font-size: 12px;');
+console.log('%cContacto: contacto.palmisoft@gmail.com | +57 317 318 4631', 'color: #0ea5e9; font-size: 12px;');

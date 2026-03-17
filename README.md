@@ -251,13 +251,13 @@ Este proyecto fue desarrollado específicamente para **PalmiSoft**.
 
 - ✅ Uso libre para PalmiSoft
 - ⚠️ No redistribuir sin autorización
-- 📧 Contacto: rojan11@gmail.com
+- 📧 Contacto: contacto.palmisoft@gmail.com
 
 ## 🤝 Soporte y Contacto
 
 **PalmiSoft**
 - 📍 Carrera 28C # 4B - 20, Palmira, Valle del Cauca, Colombia
-- 📧 rojan11@gmail.com
+- 📧 contacto.palmisoft@gmail.com
 
 ---
 
