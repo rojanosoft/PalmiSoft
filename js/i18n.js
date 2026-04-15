@@ -69,6 +69,15 @@ const translations = {
                 f2: 'Interfaces modernas',
                 f3: 'Diseño responsive',
                 f4: 'Experiencia de usuario'
+            },
+            s5: {
+                title: 'Creación de ChatBots',
+                desc: 'Mejoramos la atención al cliente con chatbots inteligentes que automatizan respuestas, reducen tiempos de espera y operan 24/7.',
+                f1: 'Atención al cliente 24/7',
+                f2: 'Respuestas automatizadas',
+                f3: 'Reducción de costos operativos',
+                f4: 'Integración con tus sistemas',
+                cta: 'Ver más'
             }
         },
         tech: {
@@ -95,6 +104,7 @@ const translations = {
                 s2: 'Automatización y RPA',
                 s3: 'Bases de Datos',
                 s4: 'Desarrollo de Aplicaciones',
+                s5: 'ChatBots',
                 about: 'Sobre Nosotros',
                 tech: 'Tecnologías',
                 contact: 'Contacto',
@@ -335,6 +345,52 @@ const translations = {
                 formBtn: 'Formulario de contacto'
             },
             back: 'Volver al inicio'
+        },
+        chatbots: {
+            page: {
+                title: 'ChatBots para Empresas',
+                subtitle: 'Automatiza la atención al cliente y escala tu negocio con chatbots inteligentes y personalizados',
+                crumb: 'ChatBots'
+            },
+            queEs: {
+                title: '¿Qué es un ChatBot?',
+                p1: 'Un chatbot es un programa informático que simula conversaciones humanas mediante inteligencia artificial y reglas de negocio configurables. Integrado en tu sitio web, aplicación o canales de mensajería, actúa como un asistente virtual disponible en todo momento.',
+                p2: 'Responde consultas, guía a tus clientes en sus procesos, recopila información y automatiza tareas repetitivas, todo sin intervención humana y con la consistencia y velocidad que tu negocio necesita.'
+            },
+            benefits: {
+                title: 'Beneficios para tu Empresa',
+                desc: 'Descubre cómo un chatbot transforma la operación de tu negocio',
+                b1: { title: 'Atención 24/7', desc: 'Tu negocio nunca cierra. Atiende clientes cualquier día y a cualquier hora sin costos adicionales de personal.' },
+                b2: { title: 'Reducción de Costos', desc: 'Automatiza hasta el 80% de las consultas frecuentes y libera a tu equipo para tareas de mayor valor.' },
+                b3: { title: 'Respuestas Instantáneas', desc: 'Elimina los tiempos de espera. Tus clientes obtienen respuestas inmediatas, mejorando su experiencia.' },
+                b4: { title: 'Escalabilidad', desc: 'Atiende cientos de conversaciones simultáneas sin necesidad de ampliar tu equipo de soporte.' },
+                b5: { title: 'Personalización Total', desc: 'Chatbots entrenados con el lenguaje, tono y procesos específicos de tu empresa y sector.' },
+                b6: { title: 'Multi-canal', desc: 'Despliega tu chatbot en sitio web, WhatsApp, Telegram y otros canales donde están tus clientes.' }
+            },
+            service: {
+                title: 'Nuestro Servicio de ChatBots Personalizados',
+                p1: 'En PalmiSoft diseñamos y desarrollamos chatbots a la medida, entrenados con la información específica de tu negocio. Analizamos tus procesos, identificamos los puntos de mayor demanda y construimos un asistente virtual que realmente trabaja para ti.',
+                p2: 'Nos especializamos en chatbots para empresas colombianas, con soporte completo en español, integración con los sistemas que ya utilizas y acompañamiento permanente después de la entrega.',
+                f1: 'Análisis de procesos y diseño de flujos conversacionales',
+                f2: 'Entrenamiento con datos y contenido de tu empresa',
+                f3: 'Integración con CRM, ERP y bases de datos existentes',
+                f4: 'Panel de administración para actualizar respuestas',
+                f5: 'Soporte técnico y mantenimiento continuo',
+                f6: 'Reportes y métricas de uso y eficiencia'
+            },
+            useCases: {
+                title: '¿Para qué tipo de empresas?',
+                desc: 'Nuestros chatbots se adaptan a cualquier sector empresarial',
+                u1: { title: 'Comercio y Retail', desc: 'Consultas de productos, estado de pedidos, soporte postventa y automatización del proceso de compra.' },
+                u2: { title: 'Servicios Profesionales', desc: 'Agendamiento de citas, cotizaciones automáticas, consultas frecuentes y calificación de prospectos.' },
+                u3: { title: 'Soporte Técnico', desc: 'Mesa de ayuda automatizada, diagnóstico inicial de problemas y escalamiento inteligente a tu equipo.' },
+                u4: { title: 'Sector Educativo', desc: 'Orientación a estudiantes, información de programas, procesos de inscripción y soporte administrativo.' }
+            },
+            cta: {
+                title: '¿Listo para automatizar tu atención al cliente?',
+                desc: 'Conversemos sobre cómo un chatbot personalizado puede transformar la experiencia de tus clientes y mejorar la eficiencia de tu negocio',
+                btn: 'Solicitar cotización'
+            }
         }
     },
 
@@ -402,6 +458,15 @@ const translations = {
                 f2: 'Modern interfaces',
                 f3: 'Responsive design',
                 f4: 'User experience'
+            },
+            s5: {
+                title: 'ChatBot Creation',
+                desc: 'We improve customer service with intelligent chatbots that automate responses, reduce wait times and operate 24 hours a day.',
+                f1: '24/7 customer service',
+                f2: 'Automated responses',
+                f3: 'Reduced operating costs',
+                f4: 'Integration with your systems',
+                cta: 'Learn more'
             }
         },
         tech: {
@@ -428,6 +493,7 @@ const translations = {
                 s2: 'Automation & RPA',
                 s3: 'Databases',
                 s4: 'App Development',
+                s5: 'ChatBots',
                 about: 'About Us',
                 tech: 'Technologies',
                 contact: 'Contact',
@@ -668,6 +734,52 @@ const translations = {
                 formBtn: 'Contact form'
             },
             back: 'Back to Home'
+        },
+        chatbots: {
+            page: {
+                title: 'ChatBots for Business',
+                subtitle: 'Automate customer service and scale your business with intelligent, custom chatbots',
+                crumb: 'ChatBots'
+            },
+            queEs: {
+                title: 'What is a ChatBot?',
+                p1: 'A chatbot is a computer program that simulates human conversations through artificial intelligence and configurable business rules. Integrated into your website, app or messaging channels, it acts as a virtual assistant available at all times.',
+                p2: 'It answers inquiries, guides your customers through their processes, collects information and automates repetitive tasks — all without human intervention and with the consistency and speed your business needs.'
+            },
+            benefits: {
+                title: 'Benefits for Your Business',
+                desc: 'Discover how a chatbot transforms your business operations',
+                b1: { title: '24/7 Availability', desc: 'Your business never closes. Serve customers any day, at any time, without additional staffing costs.' },
+                b2: { title: 'Cost Reduction', desc: 'Automate up to 80% of frequent inquiries and free your team for higher-value tasks.' },
+                b3: { title: 'Instant Responses', desc: 'Eliminate wait times. Your customers get immediate answers, improving their experience.' },
+                b4: { title: 'Scalability', desc: 'Handle hundreds of simultaneous conversations without expanding your support team.' },
+                b5: { title: 'Full Personalization', desc: "Chatbots trained with your company's specific language, tone and processes." },
+                b6: { title: 'Multi-channel', desc: 'Deploy your chatbot on website, WhatsApp, Telegram and other channels where your customers are.' }
+            },
+            service: {
+                title: 'Our Custom ChatBot Service',
+                p1: "At PalmiSoft we design and develop custom chatbots, trained with your business's specific information. We analyze your processes, identify the highest-demand touchpoints and build a virtual assistant that truly works for you.",
+                p2: 'We specialize in chatbots for Colombian businesses, with full Spanish support, integration with your existing systems and ongoing support after delivery.',
+                f1: 'Process analysis and conversational flow design',
+                f2: "Training with your company's data and content",
+                f3: 'Integration with existing CRM, ERP and databases',
+                f4: 'Admin panel to update responses',
+                f5: 'Technical support and continuous maintenance',
+                f6: 'Usage and efficiency reports and metrics'
+            },
+            useCases: {
+                title: 'What Type of Businesses?',
+                desc: 'Our chatbots adapt to any business sector',
+                u1: { title: 'Commerce & Retail', desc: 'Product inquiries, order status, after-sales support and purchase process automation.' },
+                u2: { title: 'Professional Services', desc: 'Appointment scheduling, automatic quotes, FAQs and prospect qualification.' },
+                u3: { title: 'Technical Support', desc: 'Automated help desk, initial problem diagnosis and intelligent escalation to your team.' },
+                u4: { title: 'Education Sector', desc: 'Student guidance, program information, enrollment processes and administrative support.' }
+            },
+            cta: {
+                title: 'Ready to Automate Your Customer Service?',
+                desc: "Let's talk about how a custom chatbot can transform your customers' experience and improve your business efficiency",
+                btn: 'Request a Quote'
+            }
         }
     }
 };

@@ -25,4 +25,11 @@
     <priority>0.30</priority>
   </url>
 
+  <url>
+    <loc>https://palmisoft.com.co/chatbots.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
 </urlset>
