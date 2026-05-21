@@ -3,3 +3,6 @@ Allow: /
 
 # Sitemap
 Sitemap: https://palmisoft.com.co/sitemap.xml
+
+User-agent: Google-adstxt
+Disallow:
