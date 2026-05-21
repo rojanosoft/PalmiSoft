@@ -222,7 +222,7 @@ const translations = {
                             <li><strong>Razón social:</strong> PalmiSoft</li>
                             <li><strong>Domicilio:</strong> Palmira, Valle del Cauca – Colombia</li>
                             <li><strong>Dirección:</strong> Palmira, Valle del Cauca</li>
-                            <li><strong>Correo electrónico:</strong> <a href="mailto:contacto.palmisoft@gmail.com">contacto.palmisoft@gmail.com</a></li>
+                            <li><strong>Correo electrónico:</strong> <a href="mailto:contacto@palmisoft.com.co">contacto@palmisoft.com.co</a></li>
                         </ul>
                         <p>En adelante, <strong>PALMISOFT</strong>, actuando como Responsable del Tratamiento de Datos Personales.</p>`
             },
@@ -300,7 +300,7 @@ const translations = {
                 body: `<p>El titular podrá ejercer sus derechos enviando una solicitud al siguiente correo electrónico:</p>
                         <div class="contact-box">
                             <i class="fas fa-envelope"></i>
-                            <a href="mailto:contacto.palmisoft@gmail.com">contacto.palmisoft@gmail.com</a>
+                            <a href="mailto:contacto@palmisoft.com.co">contacto@palmisoft.com.co</a>
                         </div>
                         <p>La solicitud deberá contener:</p>
                         <ul>
@@ -611,7 +611,7 @@ const translations = {
                             <li><strong>Company name:</strong> PalmiSoft</li>
                             <li><strong>Registered address:</strong> Palmira, Valle del Cauca – Colombia</li>
                             <li><strong>Address:</strong> Palmira, Valle del Cauca</li>
-                            <li><strong>Email:</strong> <a href="mailto:contacto.palmisoft@gmail.com">contacto.palmisoft@gmail.com</a></li>
+                            <li><strong>Email:</strong> <a href="mailto:contacto@palmisoft.com.co">contacto@palmisoft.com.co</a></li>
                         </ul>
                         <p>Hereinafter referred to as <strong>PALMISOFT</strong>, acting as the Data Controller.</p>`
             },
@@ -689,7 +689,7 @@ const translations = {
                 body: `<p>The data subject may exercise their rights by sending a request to the following email address:</p>
                         <div class="contact-box">
                             <i class="fas fa-envelope"></i>
-                            <a href="mailto:contacto.palmisoft@gmail.com">contacto.palmisoft@gmail.com</a>
+                            <a href="mailto:contacto@palmisoft.com.co">contacto@palmisoft.com.co</a>
                         </div>
                         <p>The request must include:</p>
                         <ul>
